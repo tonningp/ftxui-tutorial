@@ -1,0 +1,35 @@
+# Build artifacts
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Executables and object files
+*.o
+*.obj
+*.so
+*.a
+*.out
+*.exe
+*.dll
+
+# Generated files
+*.log
+*.tmp
+
+# IDE/editor-specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.user
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*~
+*.bak
