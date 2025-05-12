@@ -1,4 +1,4 @@
-# FTXUI Tutorial Project
+# FTXUI Tutorial
 
 🛰️ A modern, terminal-based UI tutorial project using [FTXUI](https://github.com/ArthurSonzogni/FTXUI) and CMake.
 
@@ -21,5 +21,6 @@ This repository provides a simple interactive application built with C++ and FTX
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:yourusername/ftxui-tutorial.git
+git clone https://github.com/tonningp/ftxui-tutorial.git
 cd ftxui-tutorial
+```
