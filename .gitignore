@@ -9,7 +9,6 @@ Makefile
 *.o
 *.obj
 *.so
-*.a
 *.out
 *.exe
 *.dll
