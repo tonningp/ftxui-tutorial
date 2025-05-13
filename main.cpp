@@ -5,29 +5,17 @@
 
 using namespace ftxui;
 
-void clear() {
-    std::system("clear");
-}
-
-Element TitleBar() {
-  return text("  🛰  My Cool Terminal UI  ")  // padded for aesthetics
-         | color(Color::White)              // text color
-         | bgcolor(Color::Blue)             // background color
-         | bold                             // optional: make it bold
-         | center;
-}
-
 class MainComponent : public ComponentBase {
  public:
 
   MainComponent() {
-    m_title = "No Title";
+    m_message = "No Title";
     m_screen = nullptr;
   }
 
-  MainComponent(ScreenInteractive* screen,const char title[]) {
+  MainComponent(ScreenInteractive* screen,const char message[]) {
     m_screen = screen;
-    m_title = title;
+    m_message = message;
   }
 
   void Refresh() {
@@ -35,14 +23,9 @@ class MainComponent : public ComponentBase {
   }
 
   Element OnRender() override {
-    int width = m_screen->dimx();
-    int height = m_screen->dimy();
     return vbox({
-      TitleBar(),
+      text(m_message) | center,
       separator(),
-      text(m_title),
-      text("Width: " + std::to_string(width)) | center,
-      text("Height: " + std::to_string(height)) | center,
       text("Press 'Q' or 'q' to quit.") | center,
     });
   }
@@ -60,15 +43,13 @@ class MainComponent : public ComponentBase {
   }
 
  private:
-  std::string m_title;
+  std::string m_message;
   ScreenInteractive* m_screen;
 };
 
 int main() {
-  clear();
   auto screen = ScreenInteractive::TerminalOutput();
-  auto main_component = std::make_shared<MainComponent>(&screen,"My Special Component");
+  auto main_component = std::make_shared<MainComponent>(&screen,"Main Message");
   main_component->Refresh();
   screen.Loop(main_component);
-  clear();
 }
