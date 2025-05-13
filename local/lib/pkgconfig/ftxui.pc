@@ -1,0 +1,9 @@
+prefix="/usercode/local"
+libdir="/usercode/local/lib"
+includedir="/usercode/local/include"
+
+Name: ftxui
+Description: C++ Functional Terminal User Interface.
+Version: 6.1.9
+Cflags: -I${includedir}
+Libs: -L${libdir} -lftxui-component -lftxui-dom -lftxui-screen
