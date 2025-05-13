@@ -48,8 +48,9 @@ class MainComponent : public ComponentBase {
 };
 
 int main() {
+  const char* message = "Hello Paul, welcome to a FTXUI terminal application";
   auto screen = ScreenInteractive::TerminalOutput();
-  auto main_component = std::make_shared<MainComponent>(&screen,"Main Message");
+  auto main_component = std::make_shared<MainComponent>(&screen,message);
   main_component->Refresh();
   screen.Loop(main_component);
 }
