@@ -48,6 +48,7 @@ class MainComponent : public ComponentBase {
 };
 
 int main() {
+
   auto screen = ScreenInteractive::TerminalOutput();
   auto main_component = std::make_shared<MainComponent>(&screen,"Main Message");
   main_component->Refresh();
