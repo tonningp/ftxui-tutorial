@@ -1,6 +1,6 @@
-prefix="/usercode/local"
-libdir="/usercode/local/lib"
-includedir="/usercode/local/include"
+prefix="/usercode/project/local"
+libdir="/usercode/project/local/lib"
+includedir="/usercode/project/local/include"
 
 Name: ftxui
 Description: C++ Functional Terminal User Interface.
