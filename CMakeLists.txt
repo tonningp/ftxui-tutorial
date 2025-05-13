@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)  # Optional: Ensures strictly standard C++17, no GNU extensions
 
 # Tell pkg-config where to find ftxui.pc
-set(ENV{PKG_CONFIG_PATH} "/usercode/project/local/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}")
+set(ENV{PKG_CONFIG_PATH} "/usercode/ftxui-tutorial/local/lib/pkgconfig:$ENV{PKG_CONFIG_PATH}")
 
 # Use pkg-config to find ftxui
 find_package(PkgConfig REQUIRED)
