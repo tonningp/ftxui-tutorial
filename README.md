@@ -5,8 +5,9 @@
 Update the provided C++ program using the FTXUI library so that it displays:
 
 ```
-Hello, Welcome to FTXUI
+Hello ######, Welcome to FTXUI
 ```
+Replace the ###### with your name.
 
 This lab introduces component-based UI design in terminal applications using FTXUI, and reinforces how to pass data to components using constructors.
 
@@ -14,7 +15,7 @@ This lab introduces component-based UI design in terminal applications using FTX
 
 ## 📂 Files Provided
 
-- `main.cpp` — starter program with a `MainComponent` class
+- `main.cpp` — starter program with a `MainComponent` clas
 - `CMakeLists.txt` — for building the project with FTXUI (provided separately)
 
 ---
@@ -32,20 +33,22 @@ auto main_component = std::make_shared<MainComponent>(&screen, "Main Message");
 ### 2. Change the second argument (the message string) to:
 
 ```cpp
-"Hello, Welcome to FTXUI"
+"Hello YourName, Welcome to FTXUI"
 ```
 
 So the updated line becomes:
 
 ```cpp
-auto main_component = std::make_shared<MainComponent>(&screen, "Hello, Welcome to FTXUI");
+auto main_component = std::make_shared<MainComponent>(&screen, "Hello YourName, Welcome to FTXUI");
 ```
 
 ### 3. Save the file.
 
 ### 4. Build and run:
 
+
 ```bash
+#  In the ftxui-tutorial directory give the following commands
 mkdir build
 cd build
 cmake ..
@@ -56,7 +59,7 @@ make
 ### 5. Expected Output:
 
 ```
-Hello, Welcome to FTXUI
+Hello YourName, Welcome to FTXUI
 ------------------------
 Press 'Q' or 'q' to quit.
 ```
@@ -74,7 +77,7 @@ Press 'Q' or 'q' to quit.
 ## 🧠 Optional Challenges
 
 - Change the message based on user input or a random quote
-- Center and color the message using `| center | color(Color::Green)`
+- Center and color the message using the modifiers `| center | color(Color::Green)`
 - Add a second constructor that includes a title
 
 ---
