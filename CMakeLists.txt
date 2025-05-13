@@ -19,3 +19,20 @@ link_directories(${FTXUI_LIBRARY_DIRS})
 add_executable(main main.cpp)
 target_link_libraries(main ${FTXUI_LIBRARIES} pthread)
 
+# Catch2 v3 via FetchContent
+#include(FetchContent)
+#FetchContent_Declare(
+#  Catch2
+#  GIT_REPOSITORY https://github.com/catchorg/Catch2.git
+#  GIT_TAG v3.5.2 # or latest
+#)
+#FetchContent_MakeAvailable(Catch2)
+
+# Define test target
+#add_executable(unit_tests tests/test_hello.cpp)
+#target_link_libraries(unit_tests PRIVATE Catch2::Catch2WithMain)
+#
+#include(CTest)
+#include(Catch)
+#catch_discover_tests(unit_tests)
+
